@@ -1,0 +1,10 @@
+.settings
+*.settings
+*/out/
+*.iml
+.DS_Store
+*.DS_Store
+*target/
+*out/*
+.idea/*
+*.idea/workspace.xml

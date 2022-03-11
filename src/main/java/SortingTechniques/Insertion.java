@@ -1,7 +1,7 @@
 package SortingTechniques;
 
-public class InsertionSort {
-    private InsertionSort() { }
+public class Insertion {
+    private Insertion() { }
 
     public static void Sort(Comparable[] array) {
         for (int i = 0; i < array.length; i++) {
@@ -13,6 +13,8 @@ public class InsertionSort {
                 }
             }
         }
+
+        assert isSorted(array);
     }
 
     private static boolean less(Comparable a, Comparable b) {
@@ -23,5 +25,15 @@ public class InsertionSort {
         Comparable temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    private static boolean isSorted(Comparable[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            if(!less(array[i], array[i + 1])) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
