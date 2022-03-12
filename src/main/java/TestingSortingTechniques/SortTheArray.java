@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class SortTheArray {
     private static final Logger logger = LogManager.getLogger(SortTheArray.class);
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         BasicConfigurator.configure();
 
         logger.info("====================");
