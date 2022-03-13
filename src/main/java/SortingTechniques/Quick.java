@@ -5,6 +5,8 @@ public class Quick {
 
     public static void Sort(Comparable[] array) {
         Sort(array, 0, array.length - 1);
+
+        assert isSorted(array);
     }
 
     public static Comparable Select(Comparable[] array, int k) {
