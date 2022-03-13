@@ -1,9 +1,6 @@
 package TestingSortingTechniques;
 
-import SortingTechniques.Bubble;
-import SortingTechniques.Insertion;
-import SortingTechniques.Merge;
-import SortingTechniques.Selection;
+import SortingTechniques.*;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -47,5 +44,20 @@ public class SortTheArray {
         logger.info("Using Bubble Sort");
         Bubble.Sort(array);
         logger.info(Arrays.toString(array));
+
+        logger.info("====================");
+
+        array = new Integer[]{4, 6, 1, 2, 9, 8, 3, 0, -9, -2, -5, 4, 6, 10, 13, 124, -99};
+        logger.info("Array to be sorted: " + Arrays.toString(array));
+        logger.info("Using Quick Sort");
+        Quick.Sort(array);
+        logger.info(Arrays.toString(array));
+
+        logger.info("====================");
+
+        array = new Integer[]{4, 6, 1, 2, 9, 8, 3, 0, -9, -2, -5, 4, 6, 10, 13, 124, -99};
+        logger.info("Array to be sorted: " + Arrays.toString(array));
+        logger.info("Finding Kth lowest: 4th lowest Element Using Quick Sort");
+        logger.info(Quick.Select(array, 4));
     }
 }
